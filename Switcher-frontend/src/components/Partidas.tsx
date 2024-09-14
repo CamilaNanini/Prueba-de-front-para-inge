@@ -1,5 +1,3 @@
-//import React, { useState } from 'react';
-
 import { Link } from "react-router-dom";
 
 type Partida = {
@@ -21,7 +19,7 @@ function crearPartidas(cantidadPartidas:any) {
     return partidas;
   }
 
-const Partidas: React.FC = () => {
+function Partidas () {
     const partidas: Partida[] = crearPartidas(9)
   return (
     <div>
@@ -29,7 +27,7 @@ const Partidas: React.FC = () => {
       <ul>
         {partidas.map((partida) => (
           <li key={partida.id}>
-            <Link className="redirigir" to="/espera"> 
+            <Link className="redirigir" to={`/espera/${partida.id}`}> 
             <button> {partida.nombre} </button> 
             </Link>
           </li>

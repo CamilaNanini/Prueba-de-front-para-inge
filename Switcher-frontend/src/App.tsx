@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<><Home /><Partidas /></>}/>
-          <Route path='/espera' element={<Espera />}/>
+          <Route path='/espera/:id_partida' element={<Espera />}/>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,8 +1,10 @@
+import { useParams } from "react-router-dom";
 
-const Espera: React.FC = () => {
+function Espera () {
+  let { id_partida } = useParams<{id_partida:string}>();  
   return (
     <div>
-      <h1>Esperando a otros jugadores</h1>
+      <h1>Esperando a otros jugadores de la sala {id_partida}</h1>
     </div>
   );
 };
